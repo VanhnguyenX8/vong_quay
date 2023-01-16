@@ -40,6 +40,7 @@ dependencies:
   flutter_hooks: ^0.18.5+1
   quiver: ^3.2.1
   from_css_color: ^2.0.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:

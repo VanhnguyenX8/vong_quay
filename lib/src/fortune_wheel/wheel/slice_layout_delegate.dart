@@ -29,7 +29,8 @@ class _CircleSliceLayoutDelegate extends MultiChildLayoutDelegate {
         BoxConstraints.loose(size),
       );
 
-      final topRectVector = _math.Point(sliceSize.width / 2, 0.0);
+      final topRectVector = _math.Point(sliceSize.width / 1.5, 1.0);
+      // tọa độ text trong spiner
       final halfAngleVector = topRectVector.rotate(angle / 2);
 
       positionChild(

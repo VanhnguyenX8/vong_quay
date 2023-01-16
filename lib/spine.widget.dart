@@ -3,6 +3,7 @@ import 'package:from_css_color/from_css_color.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:vong_quay/src/fortune_wheel/core/core.dart';
 import 'package:vong_quay/src/fortune_wheel/wheel/wheel.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SpineWidget extends StatefulWidget {
   const SpineWidget({super.key});
@@ -32,11 +33,9 @@ class _SpineWidgetState extends State<SpineWidget> {
     '0đ',
     '50.000đ',
     '0đ',
-    '0đ',
     '100.000đ',
     '0đ',
     '500.000đ',
-    '0đ'
   ];
   @override
   void dispose() {
@@ -45,11 +44,14 @@ class _SpineWidgetState extends State<SpineWidget> {
   }
 
   xuly(int i) {
-    var hex = fromCssColor('#fbafba'); 
     if (i % 2 == 0) {
-      return const TextStyle(fontSize: 23, color: Colors.red);
+      return GoogleFonts.mulish(
+        textStyle: const TextStyle(fontSize: 16, color: Colors.red),
+      );
     } else {
-      return const TextStyle(fontSize: 23, color: Colors.white);
+      return GoogleFonts.mulish(
+        textStyle: const TextStyle(fontSize: 16, color: Colors.white),
+      );
     }
   }
 
@@ -59,7 +61,6 @@ class _SpineWidgetState extends State<SpineWidget> {
       body: Center(
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const SizedBox(
             height: 40,
@@ -72,11 +73,10 @@ class _SpineWidgetState extends State<SpineWidget> {
                     height: 70,
                     width: 70,
                     image: AssetImage('assets/images/van_may_today.png')),
-                     Image(
+                Image(
                     height: 25,
                     width: 139,
                     image: AssetImage('assets/images/van_may_text.png')),
-               
               ],
             ),
             Row(
@@ -94,8 +94,11 @@ class _SpineWidgetState extends State<SpineWidget> {
                       const SizedBox(
                         width: 5,
                       ),
-                      const Text(
+                      Text(
                         '20.000đ',
+                        style: GoogleFonts.mulish(
+                          textStyle: const TextStyle(fontSize: 14),
+                        ),
                       ),
                       Container(
                         height: 30,
@@ -121,13 +124,13 @@ class _SpineWidgetState extends State<SpineWidget> {
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            'Chăm chỉ quay quay, vận may sẽ đến.',
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-          ),
-          const SizedBox(
-            height: 50,
-          ),
+          // const Text(
+          //   'Chăm chỉ quay quay, vận may sẽ đến.',
+          //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700,fontFamily: 'Mulish',),
+          // ),
+          // const SizedBox(
+          //   height: 50,
+          // ),
           Stack(
             alignment: Alignment.center,
             children: [
@@ -154,9 +157,13 @@ class _SpineWidgetState extends State<SpineWidget> {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: Colors.black,
                         content: Text(
-                          'Chúc mừng bạn đã quay được số tiền là: $resultItem',
-                          style: const TextStyle(color: Colors.red),
-                        )));
+                            'Chúc mừng bạn đã quay được số tiền là: $resultItem',
+                            style:
+                                // const TextStyle(color: Colors.red,fontFamily: 'Mulish',),
+                                GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 14),
+                              color: Colors.red,
+                            ))));
                   },
                 ),
               ),
@@ -178,50 +185,102 @@ class _SpineWidgetState extends State<SpineWidget> {
               });
             },
             child: Container(
-              height: 100,
-              width: 268,
+              height: 90,
+              width: 190,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: fromCssColor('#FE233D'),
               ),
-              child: const Center(
-                  child: Text(
-                'Quay',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Mulish',
-                  fontSize: 25,
-                  fontWeight: FontWeight.w900,
-                ),
-              )),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        'Bạn còn 1 lượt',
+                        style: GoogleFonts.mulish(
+                            textStyle: const TextStyle(fontSize: 12),
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Center(
+                      child: Text(
+                    'Quay',
+                    style: GoogleFonts.mulish(
+                        textStyle: const TextStyle(fontSize: 25),
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900),
+                  )),
+                ],
+              ),
             ),
           ),
           const SizedBox(
             height: 10,
           ),
-          GestureDetector(
-            onTap: () {},
-            child: Container(
-              height: 42,
-              width: 126,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: fromCssColor('#ECECEC'),
-                  // ignore: prefer_const_literals_to_create_immutables
-                  boxShadow: [
-                    const BoxShadow(blurRadius: 1.0),
-                  ]),
-              child: const Center(
-                  child: Text(
-                'Thêm lượt',
-                style: TextStyle(
-                  color: Colors.black38,
-                  fontFamily: 'Mulish',
-                  fontSize: 18,
-                  fontWeight: FontWeight.w900,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              const SizedBox(
+                width: 146,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  height: 30,
+                  width: 100,
+                  
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.white,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      boxShadow: [
+                        const BoxShadow(blurRadius: 1.0),
+                      ]),
+                  child: Center(
+                      child: Text(
+                    'Thêm lượt',
+                    style: GoogleFonts.mulish(
+                        textStyle: const TextStyle(fontSize: 15),
+                        color: Colors.black38,
+                        fontWeight: FontWeight.w600),
+                  )),
                 ),
-              )),
-            ),
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 58,
+                  ),
+                  Text(
+                    '?  ',
+                    style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 17),
+                      color: Colors.red,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
+                    'Thể lệ',
+                    style: GoogleFonts.mulish(
+                        textStyle: const TextStyle(fontSize: 17),
+                        color: Colors.red,
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              )
+            ],
           ),
         ],
       )),
