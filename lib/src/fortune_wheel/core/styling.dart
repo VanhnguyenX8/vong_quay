@@ -1,35 +1,35 @@
 part of 'core.dart';
 
-/// Represents the style of a single [FortuneItem].
+/// Đại diện cho phong cách của một [FortuneItem].
 ///
-/// See also:
-///  * [StyleStrategy], which allows for styling a list of [FortuneItem]s
+/// Xem thêm:
+/// * [StyleStrategy], cho phép tạo kiểu cho danh sách [FortuneItem]s
 @immutable
 class FortuneItemStyle {
-  /// The color used for filling the background of a [FortuneItem].
+  /// Màu được sử dụng để tô nền cho [Vật phẩm].
   final Color color;
 
-  /// The color used for painting the border of a [FortuneItem].
+  /// Màu được sử dụng để vẽ đường viền của [FortuneItem].
   final Color borderColor;
 
-  /// The border width of a [FortuneItem].
+  /// Chiều rộng đường viền của [FortuneItem].
   final double borderWidth;
 
-  /// The alignment of text within a [FortuneItem]
+  /// Căn chỉnh văn bản trong [FortuneItem]
   final TextAlign textAlign;
 
-  /// The text style to use within a [FortuneItem]
+  /// Kiểu văn bản sẽ sử dụng trong [FortuneItem]
   final TextStyle textStyle;
 
   const FortuneItemStyle({
     this.color = Colors.white,
-    this.borderColor = Colors.black,
+    this.borderColor = Colors.red,
     this.borderWidth = 1.0,
-    this.textAlign = TextAlign.center,
+    this.textAlign = TextAlign.end,
     this.textStyle = const TextStyle(),
   });
 
-  /// Creates an opinionated disabled style based on the current [ThemeData].
+  /// Tạo một kiểu bị vô hiệu hóa dựa trên [ThemeData] hiện tại.
   FortuneItemStyle.disabled(ThemeData theme, {double opacity = 0.0})
       : this(
           color: Color.alphaBlend(
@@ -60,12 +60,12 @@ class FortuneItemStyle {
   }
 }
 
-/// Interface for providing common styling to a list of [FortuneItem]s.
+/// Giao diện để cung cấp kiểu dáng chung cho danh sách [FortuneItem]s.
 abstract class StyleStrategy {
-  /// {@template flutter_fortune_wheel.StyleStrategy.getItemStyle}
-  /// Creates an [FortuneItemStyle] based on the passed [theme] while
-  /// considering an item's [index] with respect to the overall [itemCount].
-  /// {@endtemplate}
+/// {@template flick_fortune_wheel.StyleStrategy.getItemStyle}
+   /// Tạo một [FortuneItemStyle] dựa trên [theme] đã thông qua trong khi
+   /// xem xét [chỉ mục] của một mục đối với [itemCount] tổng thể.
+   /// {@endtemplate}
   FortuneItemStyle getItemStyle(
     ThemeData theme,
     int index,
@@ -182,10 +182,12 @@ class AlternatingStyleStrategy
       itemCount,
       () => FortuneItemStyle(
         color: _getFillColor(theme, index, itemCount),
+        
         borderColor: theme.primaryColor,
         borderWidth: 0.0,
-        textAlign: TextAlign.end,
-        textStyle: TextStyle(color: theme.colorScheme.onPrimary),
+        textAlign: TextAlign.center,
+        
+        textStyle: TextStyle(color: theme.colorScheme.onPrimary,fontWeight: FontWeight.w900),
       ),
     );
   }

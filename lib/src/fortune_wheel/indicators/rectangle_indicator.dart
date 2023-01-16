@@ -35,7 +35,7 @@ class RectangleIndicator extends StatelessWidget {
           Align(
             alignment: Alignment.topRight,
             child: SizedBox(
-              width: width / 2,
+              width: width / 20,
               height: height / 10,
               child: _Triangle(
                 color: borderColor,
@@ -47,7 +47,7 @@ class RectangleIndicator extends StatelessWidget {
             child: Transform.rotate(
               angle: _math.pi,
               child: SizedBox(
-                width: width / 2,
+                width: width / 200,
                 height: height / 10,
                 child: _Triangle(
                   color: borderColor,

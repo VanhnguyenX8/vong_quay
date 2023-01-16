@@ -2,9 +2,13 @@ part of 'wheel.dart';
 
 Offset _calculateWheelOffset(
     BoxConstraints constraints, TextDirection textDirection) {
-  final smallerSide = getSmallerSide(constraints);
-  var offsetX = constraints.maxWidth / 2;
+// BoxConstraint : các ràng buộc về bố cục không thể thay đổi với "Render Box"
+// TextDirection: Một hướng mà văn bản chảy
+  final smallerSide = getSmallerSide(constraints); // lấy bên nhỏ hơn
+  var offsetX =
+      constraints.maxWidth / 2; // gán offsetX bằng nửa giá trị của constrain
   if (textDirection == TextDirection.rtl) {
+    // nếu tọa độ bên
     offsetX = offsetX * -1 + smallerSide / 2;
   }
   return Offset(offsetX, constraints.maxHeight / 2);
@@ -13,13 +17,15 @@ Offset _calculateWheelOffset(
 double _calculateSliceAngle(int index, int itemCount) {
   final anglePerChild = 2 * _math.pi / itemCount;
   final childAngle = anglePerChild * index;
-  // first slice starts at 90 degrees, if 0 degrees is at the top.
-  // The angle offset puts the center of the first slice at the top.
+// lát đầu tiên bắt đầu ở 90 độ, nếu 0 độ ở trên cùng.
+   // Độ lệch góc đặt tâm của lát cắt đầu tiên ở trên cùng.
   final angleOffset = -(_math.pi / 2 + anglePerChild / 2);
   return childAngle + angleOffset;
 }
 
 double _calculateAlignmentOffset(Alignment alignment) {
+  // tính toán độ căn chỉnh
+  // đây là độ căn chỉnh so với đường trung trực của các mảng của lát cắt
   if (alignment == Alignment.topRight) {
     return _math.pi * 0.25;
   }
@@ -52,14 +58,16 @@ double _calculateAlignmentOffset(Alignment alignment) {
 }
 
 class _WheelData {
-  final BoxConstraints constraints;
+  final BoxConstraints constraints; // sự ràng bộc về BOX
   final int itemCount;
-  final TextDirection textDirection;
+  final TextDirection textDirection; // vị trí text
 
   late final double smallerSide = getSmallerSide(constraints);
   late final double largerSide = getLargerSide(constraints);
-  late final double sideDifference = largerSide - smallerSide;
-  late final Offset offset = _calculateWheelOffset(constraints, textDirection);
+  late final double sideDifference =
+      largerSide - smallerSide; // độ chênh lệch 2 size
+  late final Offset offset = _calculateWheelOffset(constraints,
+      textDirection); //offset là đại diện cho 1 điểm trong không gian một khoảng cách xác định từ nguồn gốc được duy trì riêng <gần như ánh xạ vị trí>
   late final Offset dOffset = Offset(
     (constraints.maxHeight - smallerSide) / 2,
     (constraints.maxWidth - smallerSide) / 2,
@@ -143,30 +151,38 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
     return 2 * _math.pi * rotationCount * progress;
   }
 
-  /// {@template flutter_fortune_wheel.FortuneWheel}
-  /// Creates a new [FortuneWheel] with the given [items], which is centered
-  /// on the [selected] value.
-  ///
-  /// {@macro flutter_fortune_wheel.FortuneWidget.ctorArgs}.
-  ///
-  /// See also:
-  ///  * [FortuneBar], which provides an alternative visualization.
-  /// {@endtemplate}
+  /// {@template flick_fortune_wheel.FortuneWheel}
+   /// Tạo một [FortuneWheel] mới với [items] đã cho, được căn giữa
+   /// trên giá trị [đã chọn].
+   ///
+   /// {@macro rung_fortune_wheel.FortuneWidget.ctorArgs}.
+   ///
+   /// Xem thêm:
+   /// * [FortuneBar], cung cấp một hình ảnh trực quan thay thế.
+   /// {@endtemplate}
   FortuneWheel({
     Key? key,
     required this.items,
-    this.rotationCount = FortuneWidget.kDefaultRotationCount,
-    this.selected = const Stream<int>.empty(),
-    this.duration = FortuneWidget.kDefaultDuration,
-    this.curve = FortuneCurve.spin,
-    this.indicators = kDefaultIndicators,
+    this.rotationCount = FortuneWidget
+        .kDefaultRotationCount, // số vòng quay, đang để biến static là 5 vòng quay
+    this.selected = const Stream<
+        int>.empty(), // tream thông báo cho tiện ích này rằng một giá trị mới đã được chọn
+    this.duration = FortuneWidget
+        .kDefaultDuration, // trực quan hóa các quy trình lựa chọn ngẫu nhiên bằng các lặp lại danh sách các mục trước khi giải quyết 1 mục đã chọn
+    this.curve = FortuneCurve
+        .spin, // 1 lựa chọn đường con để tạo hiệu ứng động khi giá trị nó bị thay đổi <spine> là quay
+    this.indicators =
+        kDefaultIndicators, // danh sách chỉ số được hiển thị ở đầu trang chúng có thể sử đụng dể trực quan hóa vị trí đã chọn <Đây là vị trí chỉ mục>
     this.styleStrategy = kDefaultStyleStrategy,
-    this.animateFirst = true,
+    this.animateFirst =
+        true, // xác định xem tiện ích này có trên hoạt ảnh đầu tiên không
     this.onAnimationStart,
     this.onAnimationEnd,
-    this.alignment = Alignment.topCenter,
-    PanPhysics? physics,
-    this.onFling,
+    this.alignment = Alignment
+        .topCenter, // đây là vị trí mà bánh xe căn chỉnh đã chọn, thường nó sẽ là vị trí trên cùng
+    PanPhysics?
+        physics, // Lớp cơ sở để xử lý các sự kiện xoay và chuyển chúng sang khoảng cách
+    this.onFling, // được gọi khi cử chỉ ném được phát hiện là dang hoạt động
   })  : physics = physics ?? CircularPanPhysics(),
         assert(items.length > 1),
         super(key: key);
@@ -174,10 +190,13 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
   @override
   Widget build(BuildContext context) {
     final rotateAnimCtrl = useAnimationController(duration: duration);
-    final rotateAnim = CurvedAnimation(parent: rotateAnimCtrl, curve: curve);
+    final rotateAnim = CurvedAnimation(
+        parent: rotateAnimCtrl,
+        curve: curve); // các đối số gốc và đường conng không được rỗng
 
     Future<void> animate() async {
       if (rotateAnimCtrl.isAnimating) {
+        // cho dù hoạt ảnh hiện đang hoạt hình theo hướng thuận hay ngược. Điều được tách biệt bởi việc nó có hoạt động hay không. Bộ đánh dấu của bộ điều khiển hoạt ảnh có thể bị tắt tiếng
         return;
       }
 
@@ -203,19 +222,23 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
 
     return PanAwareBuilder(
       behavior: HitTestBehavior.translucent,
-      physics: physics,
-      onFling: onFling,
+      // được sử dụng bởi GestureDectector bên dưới
+      physics: physics, // được sử dụng để tính toán trạng thái vật lý
+      onFling:
+          onFling, // cuộc gọi lại sẽ được gọi lại bất kì lúc nào khi phát hiện cử chỉ vượt, vuốt
       builder: (context, panState) {
         return Stack(
           children: [
             AnimatedBuilder(
               animation: rotateAnim,
               builder: (context, _) {
-                final size = MediaQuery.of(context).size;
+                final size = MediaQuery.of(context)
+                    .size; // nhận được thông tin kích thước màn hình mà user đang sử dụng, có thể theo dõi được màn hình có bị xoay đi hay không
                 final meanSize = (size.width + size.height) / 2;
-                final panFactor = 6 / meanSize;
+                final panFactor = 6 / meanSize; //???
 
                 return LayoutBuilder(builder: (context, constraints) {
+                  // LayuotBuilder là tiện ích được trĩ hoãn, nó sẽ đợi tất cả các widget con trong nó được xây dựng hết và nó bắt đầu được xây dựng
                   final wheelData = _WheelData(
                     constraints: constraints,
                     itemCount: items.length,
@@ -225,9 +248,9 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
                   final isAnimatingPanFactor =
                       rotateAnimCtrl.isAnimating ? 0 : 1;
                   final selectedAngle =
-                      -2 * _math.pi * (selectedIndex.value / items.length);
+                      -2 * _math.pi * (selectedIndex.value / items.length); // góc chọn
                   final panAngle =
-                      panState.distance * panFactor * isAnimatingPanFactor;
+                      panState.distance * panFactor * isAnimatingPanFactor; // góc xoay
                   final rotationAngle = _getAngle(rotateAnim.value);
                   final alignmentOffset = _calculateAlignmentOffset(alignment);
 
@@ -235,11 +258,11 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
                     for (var i = 0; i < items.length; i++)
                       TransformedFortuneItem(
                         item: items[i],
-                        angle: selectedAngle +
-                            panAngle +
-                            rotationAngle +
-                            alignmentOffset +
-                            _calculateSliceAngle(i, items.length),
+                        angle: selectedAngle + // chọn
+                            panAngle + // xoay
+                            rotationAngle + // quay
+                            alignmentOffset + // căn chỉnh
+                            _calculateSliceAngle(i, items.length), // xoay lát cắt
                         offset: wheelData.offset,
                       ),
                   ];

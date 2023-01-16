@@ -11,11 +11,7 @@ class SpineWidget extends StatefulWidget {
   @override
   State<SpineWidget> createState() => _SpineWidgetState();
 }
-
-class _SpineWidgetState extends State<SpineWidget> {
-  final seclected = BehaviorSubject<int>();
-  String resultItem = '';
-  List<String> items = [
+List<String> items = [
     '0đ',
     '1.000đ',
     '0đ',
@@ -37,20 +33,25 @@ class _SpineWidgetState extends State<SpineWidget> {
     '0đ',
     '500.000đ',
   ];
+class _SpineWidgetState extends State<SpineWidget> {
+  final seclected = BehaviorSubject<int>();
+  String resultItem = '';
+  
   @override
   void dispose() {
     seclected.close();
     super.dispose();
   }
 
+
   xuly(int i) {
     if (i % 2 == 0) {
       return GoogleFonts.mulish(
-        textStyle: const TextStyle(fontSize: 16, color: Colors.red),
+        textStyle: const TextStyle(fontSize: 13, color: Colors.red),
       );
     } else {
       return GoogleFonts.mulish(
-        textStyle: const TextStyle(fontSize: 16, color: Colors.white),
+        textStyle: const TextStyle(fontSize: 13, color: Colors.white),
       );
     }
   }
@@ -137,14 +138,19 @@ class _SpineWidgetState extends State<SpineWidget> {
               SizedBox(
                 height: 350,
                 child: FortuneWheel(
+                   alignment:  Alignment.topRight,
                   selected: seclected.stream,
                   items: [
                     for (int i = 0; i < items.length; i++) ...<FortuneItem>{
                       FortuneItem(
-                        child: Text(
-                          items[i].toString(),
-                          style: xuly(i),
-                        ),
+                        style: FortuneItemStyle(textAlign: TextAlign.end,borderColor: Colors.black,),
+                        child:
+                          
+                            Text(
+                              items[i].toString(),
+                              style: xuly(i),
+                              
+                            ),
                       ),
                     },
                   ],

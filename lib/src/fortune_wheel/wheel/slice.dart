@@ -3,19 +3,24 @@ part of 'wheel.dart';
 class _CircleSlice extends StatelessWidget {
   static Path buildSlicePath(double radius, double angle) {
     return Path()
-      ..moveTo(0, 0)
-      ..lineTo(radius, 0)
+      ..moveTo(0, 0) // bắt đầu đường dẫn phụ mới tại tọa độ đã cho
+      ..lineTo(
+          radius, 0) // thêm một đoạn thằng từ điểm hiện tại đến điểm đã cho
       ..arcTo(
           Rect.fromCircle(
             center: Offset(0, 0),
             radius: radius,
-          ),
+          ), // đối số sai thì têm 1 đoạn thẳng và 1 đoạn cung, đúng thì bắt đầu đường dẫn phụ mới bao gồm 1 đoạn cung
           0,
           angle,
           false)
-      ..close();
+      ..close(); // đóng đường dẫn phụ cuối cùng
   }
 
+  // bắt đầu vẽ các lát cắt
+// đoạn mã trên vẽ ra 3 dòng đơn giản , 1 Đường thẳng từ góc trên cùng bên trái đến góc trên cùng bên phải
+// 2  một đoạn cong từ góc trên cùng bên phải đến góc dưới cùng bên trái
+// 3 Một đường thẳng từ góc dưới bên trái trở lại
   final double radius; // bán kính
   final double angle; // góc
   final Color fillColor; // màu
@@ -48,7 +53,6 @@ class _CircleSlice extends StatelessWidget {
     );
   }
 }
-
 
 class _CircleSliceLayout extends StatelessWidget {
   final Widget? child;
@@ -122,15 +126,22 @@ class _CircleSliceLayout extends StatelessWidget {
               LayoutId(
                 id: _SliceSlot.slice,
                 child: slice,
+                
               ),
               if (child != null)
                 LayoutId(
-                  id: _SliceSlot.child,
-                  child: Transform.rotate(
-                    angle: slice.angle / 2,
-                    child: child,
-                  ),
-                ),
+                    id: _SliceSlot.child,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Transform.rotate(
+                          angle: slice.angle / 2,
+                          child: child,
+                          alignment: Alignment.topRight,
+                        ),
+                        const SizedBox(height: 10,)
+                      ],
+                    )),
             ],
           ),
         ),

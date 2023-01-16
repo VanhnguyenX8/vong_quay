@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 
 double getSmallerSide(BoxConstraints constraints) {
   return _math.min(constraints.maxWidth, constraints.maxHeight);
+  // chiều rộng tối đa về chiều rộng, hoặc chiều rộng tối đa về chiều dài
 }
 
 double getLargerSide(BoxConstraints constraints) {

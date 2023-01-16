@@ -1,14 +1,14 @@
 part of 'bar.dart';
 
-/// A fortune bar visualizes a (random) selection process as a horizontal bar
-/// divided into uniformly sized boxes, which correspond to the number of
-/// [items]. When spinning, items are moved horizontally for [duration].
+/// Thanh tài sản trực quan hóa quá trình lựa chọn (ngẫu nhiên) dưới dạng thanh ngang
+/// được chia thành các ô có kích thước đồng đều, tương ứng với số lượng
+/// [mặt hàng]. Khi quay, vật phẩm được di chuyển theo chiều ngang trong [thời lượng].
 ///
-/// See also:
-///  * [FortuneWheel], which provides an alternative visualization
-///  * [FortuneWidget()], which automatically chooses a fitting widget
-///  * [Fortune.randomItem], which helps selecting random items from a list
-///  * [Fortune.randomDuration], which helps choosing a random duration
+/// Xem thêm:
+/// * [FortuneWheel], cung cấp hình ảnh thay thế
+/// * [FortuneWidget()], tự động chọn widget phù hợp
+/// * [Fortune.randomItem], giúp chọn các mục ngẫu nhiên từ danh sách
+/// * [Fortune.randomDuration], giúp chọn thời lượng ngẫu nhiên
 class FortuneBar extends HookWidget implements FortuneWidget {
   static const int kDefaultVisibleItemCount = 3;
 

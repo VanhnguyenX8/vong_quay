@@ -22,11 +22,6 @@ class _TransformedCircleSlice extends StatelessWidget {
 
     return _CircleSliceLayout(
       handler: item,
-      child: DefaultTextStyle(
-        textAlign: style.textAlign,
-        style: style.textStyle,
-        child: item.child,
-      ),
       slice: _CircleSlice(
         radius: wheelData.radius,
         angle: wheelData.itemAngle,
@@ -34,6 +29,14 @@ class _TransformedCircleSlice extends StatelessWidget {
         strokeColor: style.borderColor,
         strokeWidth: style.borderWidth,
       ),
+      child: 
+          DefaultTextStyle(
+            textAlign: TextAlign.end,
+            style: style.textStyle,
+            child: item.child,
+          ),
+        
+      
     );
   }
 }

@@ -9,7 +9,7 @@ class _CircleSliceLayoutDelegate extends MultiChildLayoutDelegate {
   final double angle;
 
   _CircleSliceLayoutDelegate(this.angle);
-
+// phần điều chỉnh tọa độ của text trong các lát cắt
   @override
   void performLayout(Size size) {
     late Size sliceSize;
@@ -29,17 +29,20 @@ class _CircleSliceLayoutDelegate extends MultiChildLayoutDelegate {
         BoxConstraints.loose(size),
       );
 
-      final topRectVector = _math.Point(sliceSize.width / 1.5, 1.0);
+      // final topRectVector = _math.Point(sliceSize.width / 1.5, 1.0);
+      // final topRectVector = _math.Point(sliceSize.width/1.29,8.0);
+      // print(topRectVector);
       // tọa độ text trong spiner
-      final halfAngleVector = topRectVector.rotate(angle / 2);
+     
+      // final halfAngleVector = topRectVector.rotate(angle / 2);
 
-      positionChild(
-        _SliceSlot.child,
-        Offset(
-          halfAngleVector.x - childSize.width / 2,
-          halfAngleVector.y - childSize.height / 2,
-        ),
-      );
+      // positionChild(
+      //   _SliceSlot.child,
+      //   Offset(
+      //     halfAngleVector.x - childSize.width / 2,
+      //     halfAngleVector.y - childSize.height / 2,
+      //   ),
+      // );
     }
   }
 

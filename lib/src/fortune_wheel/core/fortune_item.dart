@@ -213,8 +213,9 @@ class FortuneItem implements GestureHandler {
 @immutable
 class TransformedFortuneItem implements FortuneItem {
   final FortuneItem _item;
-  final double angle;
-  final Offset offset;
+  //[FortuneItem] đại diện cho một giá trị, được chọn trong quá trình lựa chọn và được hiển thị trong [FortuneWidget].
+  final double angle; // góc
+  final Offset offset; // tắt
 
   const TransformedFortuneItem({
     required FortuneItem item,
