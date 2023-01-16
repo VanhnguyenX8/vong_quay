@@ -2,6 +2,7 @@ import 'dart:math' as _math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:from_css_color/from_css_color.dart';
 import 'package:quiver/core.dart';
 
 import '../bar/bar.dart';

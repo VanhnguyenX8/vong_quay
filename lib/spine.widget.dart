@@ -45,10 +45,11 @@ class _SpineWidgetState extends State<SpineWidget> {
   }
 
   xuly(int i) {
+    var hex = fromCssColor('#fbafba'); 
     if (i % 2 == 0) {
       return const TextStyle(fontSize: 23, color: Colors.red);
     } else {
-      return const TextStyle(fontSize: 23, color: Colors.black);
+      return const TextStyle(fontSize: 23, color: Colors.white);
     }
   }
 

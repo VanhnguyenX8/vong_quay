@@ -160,7 +160,7 @@ class AlternatingStyleStrategy
     if(itemCount % 2 == 1 ) {
     }
     final color1 = index % 2 == 1
-        ? Colors.red
+        ? fromCssColor('#FE233D')
         : Colors.white;
 
     return Color.alphaBlend(
