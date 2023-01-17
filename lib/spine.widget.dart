@@ -12,31 +12,33 @@ class SpineWidget extends StatefulWidget {
   State<SpineWidget> createState() => _SpineWidgetState();
 }
 
+List<String> items = [
+  '0đ',
+  '1.000đ',
+  '0đ',
+  '2.000đ',
+  '0đ',
+  '3.000đ',
+  '0đ',
+  '4.000đ',
+  '0đ',
+  '9.000đ',
+  '0đ',
+  '11.000đ',
+  '0đ',
+  '20.000đ',
+  '0đ',
+  '50.000đ',
+  '0đ',
+  '100.000đ',
+  '0đ',
+  '500.000đ',
+];
+
 class _SpineWidgetState extends State<SpineWidget> {
   final seclected = BehaviorSubject<int>();
   String resultItem = '';
-  List<String> items = [
-    '0đ',
-    '1.000đ',
-    '0đ',
-    '2.000đ',
-    '0đ',
-    '3.000đ',
-    '0đ',
-    '4.000đ',
-    '0đ',
-    '9.000đ',
-    '0đ',
-    '11.000đ',
-    '0đ',
-    '20.000đ',
-    '0đ',
-    '50.000đ',
-    '0đ',
-    '100.000đ',
-    '0đ',
-    '500.000đ',
-  ];
+
   @override
   void dispose() {
     seclected.close();
@@ -46,11 +48,11 @@ class _SpineWidgetState extends State<SpineWidget> {
   xuly(int i) {
     if (i % 2 == 0) {
       return GoogleFonts.mulish(
-        textStyle: const TextStyle(fontSize: 16, color: Colors.red),
+        textStyle: const TextStyle(fontSize: 13, color: Colors.red),
       );
     } else {
       return GoogleFonts.mulish(
-        textStyle: const TextStyle(fontSize: 16, color: Colors.white),
+        textStyle: const TextStyle(fontSize: 13, color: Colors.white),
       );
     }
   }
@@ -137,10 +139,12 @@ class _SpineWidgetState extends State<SpineWidget> {
               SizedBox(
                 height: 350,
                 child: FortuneWheel(
+                  alignment: Alignment.topRight,
                   selected: seclected.stream,
                   items: [
                     for (int i = 0; i < items.length; i++) ...<FortuneItem>{
                       FortuneItem(
+                        // style: FortuneItemStyle(textAlign: TextAlign.end,borderColor: Colors.black,),
                         child: Text(
                           items[i].toString(),
                           style: xuly(i),
@@ -240,7 +244,6 @@ class _SpineWidgetState extends State<SpineWidget> {
                 child: Container(
                   height: 30,
                   width: 100,
-                  
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
