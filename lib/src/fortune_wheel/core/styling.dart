@@ -25,7 +25,7 @@ class FortuneItemStyle {
     this.color = Colors.white,
     this.borderColor = Colors.black,
     this.borderWidth = 1.0,
-    this.textAlign = TextAlign.center,
+    this.textAlign = TextAlign.start,
     this.textStyle = const TextStyle(),
   });
 
@@ -138,7 +138,7 @@ class UniformStyleStrategy
         borderColor: borderColor ?? theme.primaryColor,
         borderWidth: borderWidth ?? 1.0,
         textStyle: textStyle ?? TextStyle(color: theme.colorScheme.onSurface),
-        textAlign: textAlign ?? TextAlign.left,
+        textAlign: textAlign ?? TextAlign.center,
       ),
     );
   }
@@ -184,7 +184,7 @@ class AlternatingStyleStrategy
         color: _getFillColor(theme, index, itemCount),
         borderColor: theme.primaryColor,
         borderWidth: 0.0,
-        textAlign: TextAlign.end,
+        textAlign: TextAlign.start,
         textStyle: TextStyle(color: theme.colorScheme.onPrimary),
       ),
     );

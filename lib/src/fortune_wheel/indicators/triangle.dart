@@ -57,39 +57,6 @@ class _Triangle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-    
-    Container();
+    return Container();
   }
 }
-// class CircleView extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     final colors = <Color>[
-//       Colors.red,
-//       Colors.blue,
-//       Colors.orange,
-//       Colors.indigo,
-//       Colors.deepOrange,
-//       Colors.green,
-//     ];
-//     double anglePerSlice = 2 * Math.pi / colors.length;
-
-//     return Stack(
-//       fit: StackFit.expand,
-//       children: [
-//         for (int i = 0; i < colors.length; i++)
-//           Transform.rotate(
-//             angle: i * anglePerSlice,
-//             alignment: Alignment.topLeft,
-//             child: CustomPaint(
-//               painter: CircleSlicePainter(
-//                 anglePerSlice,
-//                 colors[i],
-//               ),
-//             ),
-//           )
-//       ],
-//     );
-//   }
-// }

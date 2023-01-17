@@ -64,4 +64,3 @@ class _CircleSlicePainter extends CustomPainter {
         strokeWidth != oldDelegate.strokeWidth;
   }
 }
-

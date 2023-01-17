@@ -23,7 +23,7 @@ class RectangleIndicator extends StatelessWidget {
       return Stack(
         children: [
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.center,
             child: _Rectangle(
               width: width,
               height: height,
@@ -33,7 +33,7 @@ class RectangleIndicator extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.bottomCenter,
             child: SizedBox(
               width: width / 2,
               height: height / 10,
@@ -43,7 +43,7 @@ class RectangleIndicator extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.topCenter,
             child: Transform.rotate(
               angle: _math.pi,
               child: SizedBox(

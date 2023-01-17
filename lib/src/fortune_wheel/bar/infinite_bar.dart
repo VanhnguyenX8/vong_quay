@@ -45,7 +45,7 @@ class _InfiniteBar extends StatelessWidget {
         width: size.width,
         height: size.height,
         child: Stack(
-          alignment: Alignment.center,
+          alignment: Alignment.centerLeft,
           children: [
             if (isLengthTwo)
               Transform.translate(

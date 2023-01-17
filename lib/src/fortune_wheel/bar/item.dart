@@ -73,13 +73,13 @@ class _FortuneBarItem extends StatelessWidget {
           ),
           color: style.color,
         ),
-        // child: Center(
+        child: Center(
           child: DefaultTextStyle(
             textAlign: style.textAlign,
             style: style.textStyle,
             child: item.child,
           ),
-        // ),
+        ),
       ),
     );
   }

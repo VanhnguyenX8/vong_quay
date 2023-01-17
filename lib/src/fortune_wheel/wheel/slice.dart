@@ -16,10 +16,10 @@ class _CircleSlice extends StatelessWidget {
       ..close();
   }
 
-  final double radius; // bán kính
-  final double angle; // góc
-  final Color fillColor; // màu
-  final Color strokeColor; // màu strokce (màu sắc nét)
+  final double radius;
+  final double angle;
+  final Color fillColor;
+  final Color strokeColor;
   final double strokeWidth;
 
   const _CircleSlice({
@@ -48,7 +48,6 @@ class _CircleSlice extends StatelessWidget {
     );
   }
 }
-
 
 class _CircleSliceLayout extends StatelessWidget {
   final Widget? child;

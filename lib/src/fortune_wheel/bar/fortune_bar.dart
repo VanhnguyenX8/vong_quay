@@ -150,7 +150,7 @@ class FortuneBar extends HookWidget implements FortuneWidget {
                 AnimatedBuilder(
                     animation: animation,
                     builder: (context, _) {
-                      final itemPosition = 
+                      final itemPosition =
                           (items.length * rotationCount + selectedIndex.value);
                       final isAnimatingPanFactor =
                           animationCtrl.isAnimating ? 0 : 1;
