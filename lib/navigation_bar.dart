@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vong_quay/layout/spine.widget.dart';
+import 'package:vong_quay/layout/xo_so_mien_bac.widget.dart';
 
 import 'layout/vietlott_power.widget.dart';
 
@@ -22,10 +23,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    XoSoMienBacWidget(),
     VietLottWidget(),
   ];
 

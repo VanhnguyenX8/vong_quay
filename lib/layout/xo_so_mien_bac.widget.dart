@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class XoSoMienBacWidget extends StatefulWidget {
   const XoSoMienBacWidget({super.key});
@@ -25,7 +26,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 borderRadius: BorderRadius.circular(12)),
             child: const Center(
                 child: Text(
-              'Vietlott 0 đồng miễn phí chọn số\n Trả thưởng theo kết quả quay số Vietlott Power.\n Lấy được càng nhiều số, cơ hội trúng thưởng càng cao',
+              'Xổ số 0 đồng. Miễn phí chọn số \n Trả thưởng theo kết quả quay Xổ số miền Bắc \n Lấy càng nhiều số, cơ hội trúng càng cao.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 11,
@@ -56,7 +57,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   ),
                   Row(
                     children: const [
-                      Text('Giải'),
+                      Text('Cơ cấu giải'),
                       SizedBox(
                         width: 102,
                       ),
@@ -189,60 +190,68 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
               ),
             ),
             Container(
-                height: 68,
+                height: 80,
                 width: 364,
                 decoration: BoxDecoration(
                     color: Colors.red,
                     border: Border.all(
                         width: 2, color: Colors.red, style: BorderStyle.solid),
                     borderRadius: BorderRadius.circular(12)),
-                child: Row(
+                child: Column(
                   children: [
-                    const SizedBox(
-                      width: 11.95,
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(8.77, 6.67, 0, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 17,
+                            width: 104,
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: const Center(
+                              child: Text(
+                                'Xổ số Miền Bắc',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 16.64, 0),
+                            child: Text(
+                              'Ngày 8/11/2022',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    const Image(
-                        height: 78.48,
-                        width: 78.48,
-                        image: AssetImage('assets/images/power.png')),
-                    const SizedBox(
-                      width: 18.78,
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(16.84, 0, 0, 0),
+                      child: Text(
+                        '66130',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 33,
+                            fontWeight: FontWeight.w700),
+                      ),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        SizedBox(
-                          height: 4,
-                        ),
-                        Text(
-                          'Ngày quay: 13/11/2022',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            fontSize: 12,
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(293.13, 0, 14.87, 0),
+                      child: Text(
+                        'Trả thưởng',
+                        style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        Text(
-                          '2.3424.394đ',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 25,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                        Text(
-                          'Thời gian còn lại: 00:07;17:30',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700),
+                      ),
                     ),
                   ],
                 )),
@@ -258,15 +267,15 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.fromLTRB(10.2, 0, 10.2, 21),
-          child: Divider(
-            color: Colors.black,
-            thickness: 0.5,
-          ),
-        ),
+        // const Padding(
+        //   padding: EdgeInsets.fromLTRB(10.2, 0, 10.2, 21),
+        //   child: Divider(
+        //     color: Colors.black,
+        //     thickness: 0.5,
+        //   ),
+        // ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(48.82, 0, 48.82, 17),
+          padding: const EdgeInsets.fromLTRB(48.82, 27.77, 48.82, 17),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -282,7 +291,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 ),
                 child: const Center(
                   child: Text(
-                    '9',
+                    '',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -298,7 +307,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 ),
                 child: const Center(
                   child: Text(
-                    '3',
+                    '',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -314,7 +323,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 ),
                 child: const Center(
                   child: Text(
-                    '2',
+                    '',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -330,7 +339,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 ),
                 child: const Center(
                   child: Text(
-                    '8',
+                    '',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -346,7 +355,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 ),
                 child: const Center(
                   child: Text(
-                    '5',
+                    '',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
@@ -372,7 +381,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 8.69, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 8.69, 0, 12),
           child: Center(
             child: Container(
               width: 268,
@@ -383,13 +392,76 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
               ),
               child: TextButton(
                 onPressed: () {},
-                child: const Text(
-                  'Lấy số',
-                  style: TextStyle(color: Colors.white,fontSize: 27),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Text('Bạn có 1 lượt',
+                            style: TextStyle(color: Colors.white, fontSize: 14))
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10, 9, 0, 0),
+                      child: Text(
+                        'Lấy số',
+                        style: TextStyle(color: Colors.white, fontSize: 27),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              width: 126,
+              height: 42,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                    width: 2, color: Colors.black, style: BorderStyle.solid),
+              ),
+              child: Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'Thêm lượt',
+                    style: TextStyle(color: Colors.black12, fontSize: 18),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 35,
+                ),
+                Text(
+                  '?  ',
+                  style: GoogleFonts.mulish(
+                    textStyle: const TextStyle(fontSize: 17),
+                    color: Colors.red,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  'Thể lệ',
+                  style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 17),
+                      color: Colors.red,
+                      fontWeight: FontWeight.w700),
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     );
