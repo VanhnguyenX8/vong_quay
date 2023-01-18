@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class VietLottWidget extends StatefulWidget {
-  const VietLottWidget({super.key});
+class XoSoMienBacWidget extends StatefulWidget {
+  const XoSoMienBacWidget({super.key});
 
   @override
-  State<VietLottWidget> createState() => _VietLottWidgetState();
+  State<XoSoMienBacWidget> createState() => _XoSoMienBacWidgetState();
 }
 
-class _VietLottWidgetState extends State<VietLottWidget> {
+class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(

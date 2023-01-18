@@ -38,73 +38,73 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Row(
-                children: const [
-                  Image(
-                      height: 70,
-                      width: 70,
-                      image: AssetImage('assets/images/van_may_today.png')),
-                  Image(
-                      height: 25,
-                      width: 139,
-                      image: AssetImage('assets/images/van_may_text.png')),
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: fromCssColor('#F1F1F1'),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          '20.000đ',
-                          style: GoogleFonts.mulish(
-                            textStyle: const TextStyle(fontSize: 14),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(13, 33, 13, 0),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: const [
+                    Image(
+                        height: 40,
+                        width: 40,
+                        image: AssetImage('assets/images/van_may_today.png')),
+                    Image(
+                        height: 25,
+                        width: 139,
+                        image: AssetImage('assets/images/van_may_text.png')),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: fromCssColor('#F1F1F1'),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            width: 5,
                           ),
-                        ),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            color: fromCssColor('#B6B6B6'),
+                          Text(
+                            '20.000đ',
+                            style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 14),
+                            ),
                           ),
-                          child: const Image(
-                              height: 20,
-                              width: 20,
-                              image: AssetImage('assets/images/avatar.png')),
-                        ),
-                      ],
+                          Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: fromCssColor('#B6B6B6'),
+                            ),
+                            child: const Image(
+                                height: 20,
+                                width: 20,
+                                image: AssetImage('assets/images/avatar.png')),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  )
-                ],
-              ),
-            ],
-          ),
-          Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
-          ),
-        ],
+                  ],
+                ),
+              ],
+            ),
+            Center(
+              child: _widgetOptions.elementAt(_selectedIndex),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

@@ -192,7 +192,7 @@ class _SpineWidgetState extends State<SpineWidget> {
           Row(
             children: [
               const SizedBox(
-                width: 58,
+                width: 35,
               ),
               Text(
                 '?  ',
