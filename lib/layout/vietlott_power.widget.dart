@@ -39,7 +39,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
           alignment: Alignment.topCenter,
           children: [
             Container(
-              height: 170,
+              height: 250,
               width: 364,
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -51,136 +51,227 @@ class _VietLottWidgetState extends State<VietLottWidget> {
                   ]),
               child: Column(
                 children: [
-                  const SizedBox(
-                    height: 70,
-                  ),
                   Row(
                     children: const [
-                      Text('Giải'),
-                      SizedBox(
-                        width: 102,
-                      ),
-                      Text('Trùng khớp'),
-                      SizedBox(
-                        width: 110,
-                      ),
-                      Text('Giá trị'),
-                    ],
-                  ),
-                  const Divider(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Jackpot 1',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 88.25, 0, 0),
+                        child: Text(
+                          'Giải',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '6 số',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(102, 88.25, 0, 0),
+                        child: Text(
+                          'Trùng khớp',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '1.873.000đ',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(110, 88.25, 0, 0),
+                        child: Text(
+                          'Giá trị',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
                     ],
                   ),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(17.46, 6.52, 17.2, 0),
+                    child: Divider(
+                      color: Colors.black,
+                      height: 1,
+                    ),
+                  ),
+                  // hàng 2
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text(
-                        'Jackpot 2',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 8.26, 0, 0),
+                        child: Text(
+                          'Jackpot 1',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '5 số + 1',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(70, 8.26, 0, 0),
+                        child: Text(
+                          '6 số',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '208.000đ',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(114, 8.26, 0, 0),
+                        child: Text(
+                          '1.873.000đ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // hàng 3
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        child: Text(
+                          'Jackpot 2',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(70, 11, 0, 0),
+                        child: Text(
+                          '5 số + 1',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(104, 11, 0, 0),
+                        child: Text(
+                          '208.000đ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  // hàng 4
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        child: Text(
+                          'Giải Nhất',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(74, 11, 0, 0),
+                        child: Text(
+                          '5 số',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(131, 11, 0, 0),
+                        child: Text(
+                          '50.000đ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  //hàng 5
+                  
+                   Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        child: Text(
+                          'Giải Nhì',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(81, 11, 0, 0),
+                        child: Text(
+                          '4 số',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(132, 11, 0, 0),
+                        child: Text(
+                          '10.000đ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: Colors.red,
+                          ),
                         ),
                       ),
                     ],
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
-                      Text(
-                        'Giải Nhất',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        child: Text(
+                          'Giải Ba',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '5 số',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(85, 11, 0, 0),
+                        child: Text(
+                          '3 số',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
                         ),
                       ),
-                      Text(
-                        '50.000đ',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Giải Nhì',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                      Text(
-                        '4 số',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                      Text(
-                        '10.000đ',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'Giải Ba',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                      Text(
-                        '3 số',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-                      Text(
-                        '2.5000đ',
-                        style: TextStyle(
-                          fontSize: 12,
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(139, 11, 0, 0),
+                        child: Text(
+                          '2.500đ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 12,
+                            color: Colors.red,
+                          ),
                         ),
                       ),
                     ],
@@ -266,7 +357,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
         //   ),
         // ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 36, 0, 33),
+          padding: const EdgeInsets.fromLTRB(0, 36.19, 0, 33),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -369,7 +460,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
             ],
           ),
         ),
-    
+
         Center(
           child: Container(
             width: 268,
@@ -402,7 +493,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0,12,0,0),
+          padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
