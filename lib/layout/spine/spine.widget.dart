@@ -177,7 +177,7 @@ class _SpineWidgetState extends State<SpineWidget> {
                   color: Colors.white,
                   // ignore: prefer_const_literals_to_create_immutables
                   boxShadow: [
-                    const BoxShadow(blurRadius: 1.0),
+                    const BoxShadow(blurRadius: 1.5),
                   ]),
               child: Center(
                   child: Text(

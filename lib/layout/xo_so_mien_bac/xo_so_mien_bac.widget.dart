@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vong_quay/layout/xo_so_mien_bac/chon_so_XSMB.widget.dart';
@@ -20,22 +21,25 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
         const SizedBox(
           height: 46,
         ),
-        Container(
-            height: 68,
-            // width: 364,
-            decoration: BoxDecoration(
-                border: Border.all(
-                    width: 2, color: const Color(0xFFFE233D), style: BorderStyle.solid),
-                borderRadius: BorderRadius.circular(12)),
-            child: const Center(
-                child: Text(
-              'Xổ số 0 đồng. Miễn phí chọn số \n Trả thưởng theo kết quả quay Xổ số miền Bắc \n Lấy càng nhiều số, cơ hội trúng càng cao.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w400,
-              ),
-            ))),
+        DottedBorder(
+          borderType: BorderType.RRect,
+          strokeWidth: 1,
+          dashPattern: const [6, 3, 6, 3],
+          padding: const EdgeInsets.all(6),
+          color: const Color(0xFFFE233D),
+          radius: const Radius.circular(12),
+          child: SizedBox(
+              height: 68,
+              child: Center(
+                  child: Text(
+                'Xổ số 0 đồng. Miễn phí chọn số \n Trả thưởng theo kết quả quay Xổ số miền Bắc \n Lấy càng nhiều số, cơ hội trúng càng cao.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.mulish(
+                    textStyle: const TextStyle(fontSize: 11),
+                    color: const Color(0xFF333333),
+                    fontWeight: FontWeight.w400),
+              ))),
+        ),
         const SizedBox(
           height: 15.78,
         ),
@@ -46,13 +50,28 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
               height: 226.81,
               // width: 364,
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(
-                      width: 2, color: Colors.white, style: BorderStyle.solid),
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: const [
-                    BoxShadow(blurRadius: 0.1, offset: Offset(0, 0.6))
-                  ]),
+                color: Colors.white,
+                border: Border.all(
+                    width: 2,
+                    color: const Color.fromARGB(0, 133, 133, 133),
+                    style: BorderStyle.solid),
+                borderRadius: BorderRadius.circular(12),
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                    color: Color(0xFFe8e8e8),
+                  ),
+                  BoxShadow(
+                    offset: Offset(-5, 0),
+                    color: Color(0xFFe8e8e8),
+                  ),
+                  BoxShadow(
+                    offset: Offset(5, 0),
+                    color: Color(0xFFe8e8e8),
+                  ),
+                ],
+              ),
               child: Column(
                 children: [
                   // const SizedBox(
@@ -60,35 +79,35 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   // ),
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(16.5, 88.25, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(16.5, 88.25, 0, 0),
                         child: Text(
                           'Cơ cấu giải',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(73, 88.25, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(73, 88.25, 0, 0),
                         child: Text(
                           'Trùng khớp',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(99, 88.25, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(99, 88.25, 0, 0),
                         child: Text(
                           'Giá trị',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w400),
                         ),
                       ),
                     ],
@@ -102,36 +121,35 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   ),
                   // hàng 2
                   Row(
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(16.5, 8.26, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(16.5, 8.26, 0, 0),
                         child: Text(
                           'Giải đặc biệt',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(65, 8.26, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(65, 8.26, 0, 0),
                         child: Text(
                           '5 số',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(126, 8.26, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(126, 8.26, 0, 0),
                         child: Text(
                           '50.000đ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color:  Color(0xFFFE233D),
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFFFE233D),
+                              fontWeight: FontWeight.w800),
                         ),
                       ),
                     ],
@@ -139,36 +157,35 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   // hàng 3
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(16.5, 11, 0, 0),
                         child: Text(
                           'Giải DE4',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(87, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(87, 11, 0, 0),
                         child: Text(
                           '4 số cuối',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(101, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(101, 11, 0, 0),
                         child: Text(
                           '10.000đ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color:  Color(0xFFFE233D)
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFFFE233D),
+                              fontWeight: FontWeight.w800),
                         ),
                       ),
                     ],
@@ -176,36 +193,35 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   // hàng 4
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(16.5, 11, 0, 0),
                         child: Text(
                           'Giải DE3',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(87, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(87, 11, 0, 0),
                         child: Text(
                           '3 số cuối',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(107, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(107, 11, 0, 0),
                         child: Text(
                           '5.000đ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color:  Color(0xFFFE233D)
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFFFE233D),
+                              fontWeight: FontWeight.w800),
                         ),
                       ),
                     ],
@@ -213,36 +229,35 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   //hàng 5
                   Row(
                     // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.fromLTRB(16.5, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(16.5, 11, 0, 0),
                         child: Text(
                           'Giải DE2',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(87, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(87, 11, 0, 0),
                         child: Text(
                           '2 số cuối',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFF333333),
+                              fontWeight: FontWeight.w700),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(107, 11, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(107, 11, 0, 0),
                         child: Text(
                           '1.000đ',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 12,
-                            color:  Color(0xFFFE233D)
-                          ),
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 12),
+                              color: const Color(0xFFFE233D),
+                              fontWeight: FontWeight.w800),
                         ),
                       ),
                     ],
@@ -254,7 +269,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 height: 80,
                 // width: 364,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFFE233D),
+                    color: const Color(0xFFFE233D),
                     border: Border.all(
                         width: 2, color: Colors.red, style: BorderStyle.solid),
                     borderRadius: BorderRadius.circular(12)),
@@ -271,61 +286,61 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                             decoration: BoxDecoration(
                                 color: Colors.black,
                                 borderRadius: BorderRadius.circular(10)),
-                            child: const Center(
+                            child: Center(
                               child: Text(
                                 'Xổ số Miền Bắc',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
+                                style: GoogleFonts.mulish(
+                                    textStyle: const TextStyle(fontSize: 12),
+                                    color: const Color(0xFFFFFFFF),
                                     fontWeight: FontWeight.w700),
                               ),
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 16.64, 0),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 16.64, 0),
                             child: Text(
                               'Ngày 8/11/2022',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 10,
+                              style: GoogleFonts.mulish(
+                                  textStyle: const TextStyle(fontSize: 12),
+                                  color: const Color(0xFFFFFFFF),
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
                         ],
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(16.84, 0, 0, 0),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16.84, 0, 0, 0),
                       child: Text(
                         '66130',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 33,
+                        style: GoogleFonts.mulish(
+                            textStyle: const TextStyle(fontSize: 30),
+                            color: const Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w700),
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(293.13, 0, 14.87, 0),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(293.13, 0, 14.87, 0),
                       child: Text(
                         'Trả thưởng',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w700),
+                        style: GoogleFonts.mulish(
+                            textStyle: const TextStyle(fontSize: 10),
+                            color: const Color(0xFFFFFFFF),
+                            fontWeight: FontWeight.w800),
                       ),
                     ),
                   ],
                 )),
           ],
         ),
-        const Padding(
-          padding: EdgeInsets.fromLTRB(10.2, 20.77, 0, 9),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10.2, 20.77, 0, 9),
           child: Text(
             'Dự đoán ngày 9/11/2022',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700,
-            ),
+            style: GoogleFonts.mulish(
+                textStyle: const TextStyle(fontSize: 16),
+                color: const Color(0xFF333333),
+                fontWeight: FontWeight.w700),
           ),
         ),
         const Padding(
@@ -442,9 +457,12 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             ),
             child: TextButton(
               onPressed: () {},
-              child: const Text(
+              child: Text(
                 'Chọn nhanh',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.mulish(
+                    textStyle: const TextStyle(fontSize: 13),
+                    color: const Color(0xFFFDFDFD),
+                    fontWeight: FontWeight.w800),
               ),
             ),
           ),
@@ -476,16 +494,24 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text('Bạn có 1 lượt',
-                            style: TextStyle(color: Colors.white, fontSize: 14))
+                      children: [
+                        Text(
+                          'Bạn có 1 lượt',
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 14),
+                              color: const Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w500),
+                        ),
                       ],
                     ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(10, 9, 0, 0),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 9, 0, 0),
                       child: Text(
                         'Lấy số',
-                        style: TextStyle(color: Colors.white, fontSize: 27),
+                        style: GoogleFonts.mulish(
+                            textStyle: const TextStyle(fontSize: 27),
+                            color: const Color(0xFFFDFDFD),
+                            fontWeight: FontWeight.w800),
                       ),
                     ),
                   ],
@@ -504,14 +530,19 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                    width: 2, color: const Color(0xFFB6B6B6), style: BorderStyle.solid),
+                    width: 2,
+                    color: const Color(0xFFB6B6B6),
+                    style: BorderStyle.solid),
               ),
               child: Center(
                 child: TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     'Thêm lượt',
-                    style: TextStyle(color: Colors.black12, fontSize: 18),
+                    style: GoogleFonts.mulish(
+                        textStyle: const TextStyle(fontSize: 18),
+                        color: const Color(0xFFB6B6B6),
+                        fontWeight: FontWeight.w600),
                   ),
                 ),
               ),
@@ -547,28 +578,39 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
           padding: const EdgeInsets.fromLTRB(0, 30, 0, 13),
           // padding: const EdgeInsets.fromLTRB(0, 30, 14.32, 0),
           child: Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
-              color: Colors.white,
-              boxShadow: const [
-                BoxShadow(
-                  blurRadius: 5.0,
-                  offset: Offset(0,5),
-                  color: Colors.black12,
-                ),
-                 BoxShadow(
-                  blurRadius: 10,
-                  offset: Offset(-5,0),
-                  color: Colors.black12,
-                ),
-              ]
-              ),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                    color: Colors.black12,
+                  ),
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: Offset(-5, 0),
+                    color: Colors.black12,
+                  ),
+                ]),
             child: ExpansionTile(
-              title: const Text('Số của bạn'),
+              title: Text(
+                'Số của bạn',
+                style: GoogleFonts.mulish(
+                    textStyle: const TextStyle(fontSize: 18),
+                    color: const Color(0xFF333333),
+                    fontWeight: FontWeight.w700),
+              ),
               textColor: const Color(0xFFFE233D),
-              trailing:
-                  Icon(_customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,color: const Color(0xFFFE233D),),
+              trailing: Icon(
+                _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                color: const Color(0xFFFE233D),
+              ),
               children: const [
-               Padding(padding: EdgeInsets.all(8.0),child: SoCuaBanXSMB(),),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SoCuaBanXSMB(),
+                ),
               ],
               onExpansionChanged: (bool expanded) {
                 setState(() => _customIcon = expanded);

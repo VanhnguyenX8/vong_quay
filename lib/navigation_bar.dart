@@ -16,8 +16,8 @@ class NavigationBarWidget extends StatefulWidget {
 
 class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color:  Color(0xFFFE233D));
+  static const TextStyle optionStyle = TextStyle(
+      fontSize: 30, fontWeight: FontWeight.bold, color: Color(0xFFFE233D));
   static const List<Widget> _widgetOptions = <Widget>[
     SpineWidget(),
     ConSoMayManWidget(),
@@ -77,7 +77,9 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                             Text(
                               '20.000đ',
                               style: GoogleFonts.mulish(
-                                textStyle: const TextStyle(fontSize: 14),
+                                textStyle: const TextStyle(fontSize: 12),
+                                color: const Color(0xFF8C8C8C),
+                                fontWeight: FontWeight.w700,
                               ),
                             ),
                             Container(
@@ -90,7 +92,8 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
                               child: const Image(
                                   height: 20,
                                   width: 20,
-                                  image: AssetImage('assets/images/avatar.png')),
+                                  image:
+                                      AssetImage('assets/images/avatar.png')),
                             ),
                           ],
                         ),
@@ -109,31 +112,38 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            backgroundColor:  Color(0xFFFE233D),
-            icon: Icon(
-              Icons.circle,
-              color: Colors.white,
+            backgroundColor: Color(0xFFFFFFFF),
+            icon: ImageIcon(
+              AssetImage('assets/icons/vongquay.png'),
             ),
             label: 'vòng quay',
           ),
           BottomNavigationBarItem(
-            backgroundColor:  Color(0xFFFE233D),
-            icon: Icon(Icons.numbers_sharp, color: Colors.white),
+            backgroundColor: Color(0xFFFFFFFF),
+            icon: ImageIcon(
+              AssetImage('assets/icons/somayman.png'),
+            ),
             label: 'Số may mắn',
           ),
           BottomNavigationBarItem(
-            backgroundColor:  Color(0xFFFE233D),
-            icon: Icon(Icons.school, color: Colors.white),
+            backgroundColor: Color(0xFFFFFFFF),
+            icon: ImageIcon(
+              AssetImage('assets/icons/XSMB.png'),
+            ),
             label: 'Xổ số MB',
           ),
           BottomNavigationBarItem(
-            backgroundColor:  Color(0xFFFE233D),
-            icon: Icon(Icons.abc, color: Colors.white),
+            backgroundColor: Color(0xFFFFFFFF),
+            icon: ImageIcon(
+              AssetImage('assets/icons/Vietlott.png'),
+            ),
             label: 'Vietlott Power',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
+        selectedItemColor: const Color(0xFFFE233D),
+        unselectedItemColor: Color(0xFF9F9F9F),
+        // unselectedIconTheme: Color(0xFFFE233D),
         onTap: _onItemTapped,
       ),
     );

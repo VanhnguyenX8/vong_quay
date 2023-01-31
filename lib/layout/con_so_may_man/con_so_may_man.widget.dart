@@ -37,27 +37,28 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                 padding: const EdgeInsets.fromLTRB(14, 0, 0, 0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: const [
-                    SizedBox(
+                  children:  [
+                    const SizedBox(
                       height: 23,
                     ),
                     Text(
                       'Số trúng thưởng\nTiếp theo',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700),
+                      
+                       style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 20),
+                      color: const Color(0xFFFDFDFD),
+                      fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.fromLTRB(0, 0, 16, 0),
+               Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 16, 0),
                 child: Text(
                   '120',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 50,
+                  style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 50),
+                      color: const Color(0xFFFDFDFD),
                       fontWeight: FontWeight.w800),
                 ),
               ),
@@ -93,33 +94,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Steve Torp',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                              style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '0 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                           style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '105',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -131,33 +131,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Vicoria Gleichner',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                              style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '1 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '104',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                         style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -169,33 +168,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Carole Bernhard',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                              style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '1 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                            style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '103',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -207,33 +205,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Randy Kirlin',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '3 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                            style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '102',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -245,33 +242,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Bạn',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '4 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '101',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -283,33 +279,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Neil Ondricka',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '3 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '100',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                         style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -321,33 +316,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Carole Bernhard',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '4 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                            style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '99',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -359,33 +353,32 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 0, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 8, 0),
                             child: Text(
                               'Randy Kirlin',
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w400,
-                              ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 15),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w400),
                             ),
                           ),
                           Text(
                             '4 giây trước',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.black26,
-                            ),
+                             style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 10),
+                      color: const Color(0xFFB6B6B6),
+                      fontWeight: FontWeight.w500),
                           ),
                         ],
                       ),
-                      const Text(
+                       Text(
                         '98',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -394,37 +387,47 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
             ),
           ),
         ),
-        Center(
-          child: Container(
-            width: 268,
-            height: 100,
-            decoration: BoxDecoration(
-              color: const Color(0xFFFE233D),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: TextButton(
-              onPressed: () {},
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      Text('Bạn có 1 lượt',
-                          style: TextStyle(color: Colors.white, fontSize: 14))
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 9, 0, 0),
-                    child: Text(
-                      'Lấy số',
-                      style: TextStyle(color: Colors.white, fontSize: 27),
+       Center(
+            child: Container(
+              width: 268,
+              height: 100,
+              decoration: BoxDecoration(
+                color: const Color(0xFFFE233D),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: TextButton(
+                onPressed: () {
+                
+                },
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Bạn có 1 lượt',
+                          style: GoogleFonts.mulish(
+                              textStyle: const TextStyle(fontSize: 14),
+                              color: const Color(0xFFFFFFFF),
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 9, 0, 0),
+                      child: Text(
+                        'Lấy số',
+                        style: GoogleFonts.mulish(
+                            textStyle: const TextStyle(fontSize: 27),
+                            color: const Color(0xFFFDFDFD),
+                            fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
           child: Row(
@@ -437,7 +440,7 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
-                      width: 2,
+                      width: 1.5,
                       color: const Color(0xFFB6B6B6),
                       style: BorderStyle.solid),
                 ),
@@ -499,7 +502,10 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                 ]),
             child: ExpansionTile(
               textColor: const Color(0xFFFE233D),
-              title: const Text('Danh sách trúng thưởng'),
+              title:  Text('Danh sách trúng thưởng',style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),),
               trailing: Icon(
                 _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                 color: const Color(0xFFFE233D),
@@ -536,7 +542,10 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
                 ]),
             child: ExpansionTile(
               textColor: const Color(0xFFFE233D),
-              title: const Text('Quà của bạn'),
+              title:  Text('Quà của bạn',style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 18),
+                      color: const Color(0xFF333333),
+                      fontWeight: FontWeight.w700),),
               trailing: Icon(
                 _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                 color: const Color(0xFFFE233D),
