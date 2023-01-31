@@ -573,16 +573,34 @@ class _VietLottWidgetState extends State<VietLottWidget> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 10),
-            child: ExpansionTile(
-              title: const Text('Số của bạn'),
-              trailing: Icon(
-                  _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
-              children: const [
-                SoCuaBanVietlott(),
-              ],
-              onExpansionChanged: (bool expanded) {
-                setState(() => _customIcon = expanded);
-              },
+            child: Container(
+               decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                  blurRadius: 5.0,
+                  offset: Offset(0,5),
+                  color: Colors.black12,
+                ),
+                 BoxShadow(
+                  blurRadius: 10,
+                  offset: Offset(-5,0),
+                  color: Colors.black12,
+                ),
+              ]
+              ),
+              child: ExpansionTile(
+                textColor: const Color(0xFFFE233D),
+                title: const Text('Số của bạn'),
+                trailing: Icon(
+                    _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,color: const Color(0xFFFE233D),),
+                children: const [
+                  Padding(padding: EdgeInsets.all(8.0),child: SoCuaBanVietlott(),)
+                ],
+                onExpansionChanged: (bool expanded) {
+                  setState(() => _customIcon = expanded);
+                },
+              ),
             ),
           ),
         ],

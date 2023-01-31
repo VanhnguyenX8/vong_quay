@@ -9,8 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: NavigationBarWidget(),
+    return  MaterialApp(
+      theme: ThemeData(
+        primaryColor: const Color(0xFFECECEC),
+      ),
+      home: const NavigationBarWidget(),
     );
   }
 }

@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'danh_sach_trung_thuong.widget.dart';
 import 'qua_cua_ban.widget.dart';
 
-
 class ConSoMayManWidget extends StatefulWidget {
   const ConSoMayManWidget({super.key});
 
@@ -15,7 +14,6 @@ class ConSoMayManWidget extends StatefulWidget {
 class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
   late bool _customIcon = false;
   @override
-  
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -28,7 +26,9 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
           decoration: BoxDecoration(
               color: const Color(0xFFFE233D),
               border: Border.all(
-                  width: 2, color: const Color(0xFFFE233D), style: BorderStyle.solid),
+                  width: 2,
+                  color: const Color(0xFFFE233D),
+                  style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(12)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,11 +70,20 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
             height: 327,
             width: 364,
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                  width: 2, color: const Color(0xFFFFFFFF), style: BorderStyle.solid),
-              borderRadius: BorderRadius.circular(12),
-            ),
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 1.0,
+                    offset: Offset(0, 5),
+                    color: Colors.black12,
+                  ),
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: Offset(-5, 0),
+                    color: Colors.black12,
+                  ),
+                ]),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(16, 18, 19, 17),
               child: Column(
@@ -385,122 +394,165 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
             ),
           ),
         ),
-        
         Center(
-            child: Container(
-              width: 268,
-              height: 100,
-              decoration: BoxDecoration(
-                color: const Color(0xFFFE233D),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: TextButton(
-                onPressed: () {
-                  
-                },
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text('Bạn có 1 lượt',
-                            style: TextStyle(color: Colors.white, fontSize: 14))
-                      ],
+          child: Container(
+            width: 268,
+            height: 100,
+            decoration: BoxDecoration(
+              color: const Color(0xFFFE233D),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: TextButton(
+              onPressed: () {},
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      Text('Bạn có 1 lượt',
+                          style: TextStyle(color: Colors.white, fontSize: 14))
+                    ],
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(10, 9, 0, 0),
+                    child: Text(
+                      'Lấy số',
+                      style: TextStyle(color: Colors.white, fontSize: 27),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.fromLTRB(10, 9, 0, 0),
-                      child: Text(
-                        'Lấy số',
-                        style: TextStyle(color: Colors.white, fontSize: 27),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  width: 126,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                        width: 2,
-                        color: const Color(0xFFB6B6B6),
-                        style: BorderStyle.solid),
-                  ),
-                  child: Center(
-                    child: TextButton(
-                      onPressed: (() {}),
-                      child: const Text(
-                        'Thêm lượt',
-                        style: TextStyle(color: Colors.black12, fontSize: 18),
-                      ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(0, 12, 0, 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                width: 126,
+                height: 42,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                      width: 2,
+                      color: const Color(0xFFB6B6B6),
+                      style: BorderStyle.solid),
+                ),
+                child: Center(
+                  child: TextButton(
+                    onPressed: (() {}),
+                    child: const Text(
+                      'Thêm lượt',
+                      style: TextStyle(color: Colors.black12, fontSize: 18),
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 20,
-                ),
-                Row(
-                  children: [
-                    const SizedBox(
-                      width: 35,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 35,
+                  ),
+                  Text(
+                    '?  ',
+                    style: GoogleFonts.mulish(
+                      textStyle: const TextStyle(fontSize: 17),
+                      color: const Color(0xFFFE233D),
+                      fontWeight: FontWeight.w700,
                     ),
-                    Text(
-                      '?  ',
-                      style: GoogleFonts.mulish(
+                  ),
+                  Text(
+                    'Thể lệ',
+                    style: GoogleFonts.mulish(
                         textStyle: const TextStyle(fontSize: 17),
-                        color:const Color(0xFFFE233D),
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Text(
-                      'Thể lệ',
-                      style: GoogleFonts.mulish(
-                          textStyle: const TextStyle(fontSize: 17),
-                          color: const Color(0xFFFE233D),
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                        color: const Color(0xFFFE233D),
+                        fontWeight: FontWeight.w700),
+                  ),
+                ],
+              ),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 16),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 16),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                    color: Colors.black12,
+                  ),
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: Offset(-5, 0),
+                    color: Colors.black12,
+                  ),
+                ]),
             child: ExpansionTile(
+              textColor: const Color(0xFFFE233D),
               title: const Text('Danh sách trúng thưởng'),
               trailing: Icon(
-                  _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
+                _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                color: const Color(0xFFFE233D),
+              ),
               children: const [
-                DanhSachTrungThuong(),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: DanhSachTrungThuong(),
+                )
               ],
               onExpansionChanged: (bool expanded) {
                 setState(() => _customIcon = expanded);
               },
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(14.32,0, 14.32, 10),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(14.32, 0, 14.32, 10),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    blurRadius: 5.0,
+                    offset: Offset(0, 5),
+                    color: Colors.black12,
+                  ),
+                  BoxShadow(
+                    blurRadius: 10,
+                    offset: Offset(-5, 0),
+                    color: Colors.black12,
+                  ),
+                ]),
             child: ExpansionTile(
+              textColor: const Color(0xFFFE233D),
               title: const Text('Quà của bạn'),
               trailing: Icon(
-                  _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
+                _customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                color: const Color(0xFFFE233D),
+              ),
               children: const [
-                QuaCuaBanWidget(),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: QuaCuaBanWidget(),
+                )
               ],
               onExpansionChanged: (bool expanded) {
                 setState(() => _customIcon = expanded);
               },
             ),
           ),
+        ),
       ],
     );
   }

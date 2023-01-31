@@ -544,17 +544,36 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 10),
-          child: ExpansionTile(
-            title: const Text('Số của bạn'),
-            trailing:
-                Icon(_customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
-            children: const [
-             SoCuaBanXSMB(),
-            ],
-            onExpansionChanged: (bool expanded) {
-              setState(() => _customIcon = expanded);
-            },
+          padding: const EdgeInsets.fromLTRB(13, 30, 14.32, 13),
+          // padding: const EdgeInsets.fromLTRB(0, 30, 14.32, 0),
+          child: Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                  blurRadius: 5.0,
+                  offset: Offset(0,5),
+                  color: Colors.black12,
+                ),
+                 BoxShadow(
+                  blurRadius: 10,
+                  offset: Offset(-5,0),
+                  color: Colors.black12,
+                ),
+              ]
+              ),
+            child: ExpansionTile(
+              title: const Text('Số của bạn'),
+              textColor: const Color(0xFFFE233D),
+              trailing:
+                  Icon(_customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down,color: const Color(0xFFFE233D),),
+              children: const [
+               Padding(padding: EdgeInsets.all(8.0),child: SoCuaBanXSMB(),),
+              ],
+              onExpansionChanged: (bool expanded) {
+                setState(() => _customIcon = expanded);
+              },
+            ),
           ),
         ),
       ],
