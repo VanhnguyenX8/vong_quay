@@ -48,7 +48,7 @@ class _SpineWidgetState extends State<SpineWidget> {
   xuly(int i) {
     if (i % 2 == 0) {
       return GoogleFonts.mulish(
-        textStyle: const TextStyle(fontSize: 13, color: Colors.red),
+        textStyle: const TextStyle(fontSize: 13, color: Color(0xFFFE233D)),
       );
     } else {
       return GoogleFonts.mulish(
@@ -94,7 +94,7 @@ class _SpineWidgetState extends State<SpineWidget> {
                             // const TextStyle(color: Colors.red,fontFamily: 'Mulish',),
                             GoogleFonts.mulish(
                           textStyle: const TextStyle(fontSize: 14),
-                          color: Colors.red,
+                          color: const Color(0xFFFE233D),
                         ))));
               },
             ),
@@ -198,7 +198,7 @@ class _SpineWidgetState extends State<SpineWidget> {
                 '?  ',
                 style: GoogleFonts.mulish(
                   textStyle: const TextStyle(fontSize: 17),
-                  color: Colors.red,
+                  color: const Color(0xFFFE233D),
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -206,7 +206,7 @@ class _SpineWidgetState extends State<SpineWidget> {
                 'Thể lệ',
                 style: GoogleFonts.mulish(
                     textStyle: const TextStyle(fontSize: 17),
-                    color: Colors.red,
+                    color: const Color(0xFFFE233D),
                     fontWeight: FontWeight.w700),
               ),
             ],

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:from_css_color/from_css_color.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vong_quay/layout/spine.widget.dart';
-import 'package:vong_quay/layout/xo_so_mien_bac.widget.dart';
+import 'package:vong_quay/layout/con_so_may_man/con_so_may_man.widget.dart';
+import 'package:vong_quay/layout/spine/spine.widget.dart';
+import 'package:vong_quay/layout/xo_so_mien_bac/xo_so_mien_bac.widget.dart';
 
-import 'layout/vietlott_power.widget.dart';
+import 'layout/vietlott/vietlott_power.widget.dart';
 
 class NavigationBarWidget extends StatefulWidget {
   const NavigationBarWidget({super.key});
@@ -16,13 +17,10 @@ class NavigationBarWidget extends StatefulWidget {
 class _NavigationBarWidgetState extends State<NavigationBarWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.red);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color:  Color(0xFFFE233D));
   static const List<Widget> _widgetOptions = <Widget>[
     SpineWidget(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    ConSoMayManWidget(),
     XoSoMienBacWidget(),
     VietLottWidget(),
   ];
@@ -111,7 +109,7 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            backgroundColor: Colors.red,
+            backgroundColor:  Color(0xFFFE233D),
             icon: Icon(
               Icons.circle,
               color: Colors.white,
@@ -119,17 +117,17 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget> {
             label: 'vòng quay',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.red,
+            backgroundColor:  Color(0xFFFE233D),
             icon: Icon(Icons.numbers_sharp, color: Colors.white),
             label: 'Số may mắn',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.red,
+            backgroundColor:  Color(0xFFFE233D),
             icon: Icon(Icons.school, color: Colors.white),
             label: 'Xổ số MB',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.red,
+            backgroundColor:  Color(0xFFFE233D),
             icon: Icon(Icons.abc, color: Colors.white),
             label: 'Vietlott Power',
           ),

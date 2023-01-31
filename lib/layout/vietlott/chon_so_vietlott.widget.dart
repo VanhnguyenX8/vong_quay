@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ChonSo extends StatefulWidget {
-  const ChonSo({super.key});
+class ChonSoVietlott extends StatefulWidget {
+  const ChonSoVietlott({super.key});
 
   @override
-  State<ChonSo> createState() => _ChonSoState();
+  State<ChonSoVietlott> createState() => _ChonSoVietlottState();
 }
 
-class _ChonSoState extends State<ChonSo> {
+class _ChonSoVietlottState extends State<ChonSoVietlott> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -1676,7 +1676,7 @@ class _ChonSoState extends State<ChonSo> {
                     width: 160,
                     height: 36,
                     decoration: BoxDecoration(
-                      color: Colors.amberAccent,
+                      color: const Color(0xFFE7AE41),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: TextButton(
@@ -1693,7 +1693,7 @@ class _ChonSoState extends State<ChonSo> {
                     width: 160,
                     height: 36,
                     decoration: BoxDecoration(
-                      color: Colors.amberAccent,
+                      color: const Color(0xFFE7AE41),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: TextButton(
@@ -1715,7 +1715,7 @@ class _ChonSoState extends State<ChonSo> {
                       width: 345,
                       height: 36,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: const Color(0xFFFE233D),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: TextButton(

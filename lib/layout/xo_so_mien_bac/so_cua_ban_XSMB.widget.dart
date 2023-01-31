@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class SoCuaBan extends StatefulWidget {
-  const SoCuaBan({super.key});
+import 'package:flutter/material.dart';
+
+class SoCuaBanXSMB extends StatefulWidget {
+  const SoCuaBanXSMB({super.key});
 
   @override
-  State<SoCuaBan> createState() => _SoCuaBanState();
+  State<SoCuaBanXSMB> createState() => _SoCuaBanXSMBState();
 }
 
-class _SoCuaBanState extends State<SoCuaBan> {
+class _SoCuaBanXSMBState extends State<SoCuaBanXSMB> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,7 +30,7 @@ class _SoCuaBanState extends State<SoCuaBan> {
          Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            Text('72 36 46 83 25 53'),
+            Text('17492'),
             Divider(
               color: Colors.black,
               height: 10,
@@ -46,7 +44,7 @@ class _SoCuaBanState extends State<SoCuaBan> {
          Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            Text('95 62 48 26 91 94'),
+            Text('84630'),
             Divider(
               color: Colors.black,
               height: 10,
@@ -60,7 +58,7 @@ class _SoCuaBanState extends State<SoCuaBan> {
          Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            Text('57 62 85 02 82 61'),
+            Text('63759'),
             Divider(
               color: Colors.black,
               height: 10,
@@ -74,7 +72,7 @@ class _SoCuaBanState extends State<SoCuaBan> {
          Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            Text('95 27 62 61 94 75'),
+            Text('63529'),
             Divider(
               color: Colors.black,
               height: 10,

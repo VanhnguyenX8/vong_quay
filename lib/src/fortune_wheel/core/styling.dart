@@ -156,7 +156,8 @@ class AlternatingStyleStrategy
   final List<int> disabledIndices;
 
   Color _getFillColor(ThemeData theme, int index, int itemCount) {
-    const background = Colors.red;
+    const background =const Color(0xFFFE233D)
+;
     if(itemCount % 2 == 1 ) {
     }
     final color1 = index % 2 == 1

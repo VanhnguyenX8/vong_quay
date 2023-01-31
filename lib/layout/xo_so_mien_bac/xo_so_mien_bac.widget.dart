@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vong_quay/layout/chon_so.widget.dart';
-import 'package:vong_quay/layout/so_cua_ban.widget.dart';
+import 'package:vong_quay/layout/xo_so_mien_bac/chon_so_XSMB.widget.dart';
+import 'package:vong_quay/layout/xo_so_mien_bac/so_cua_ban_XSMB.widget.dart';
 
 class XoSoMienBacWidget extends StatefulWidget {
   const XoSoMienBacWidget({super.key});
@@ -15,7 +15,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(
           height: 46,
@@ -25,7 +25,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             width: 364,
             decoration: BoxDecoration(
                 border: Border.all(
-                    width: 2, color: Colors.red, style: BorderStyle.solid),
+                    width: 2, color: const Color(0xFFFE233D), style: BorderStyle.solid),
                 borderRadius: BorderRadius.circular(12)),
             child: const Center(
                 child: Text(
@@ -130,7 +130,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
-                            color: Colors.red,
+                            color:  Color(0xFFFE233D),
                           ),
                         ),
                       ),
@@ -167,7 +167,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
-                            color: Colors.red,
+                            color:  Color(0xFFFE233D)
                           ),
                         ),
                       ),
@@ -204,7 +204,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
-                            color: Colors.red,
+                            color:  Color(0xFFFE233D)
                           ),
                         ),
                       ),
@@ -241,7 +241,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             fontSize: 12,
-                            color: Colors.red,
+                            color:  Color(0xFFFE233D)
                           ),
                         ),
                       ),
@@ -254,7 +254,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 height: 80,
                 width: 364,
                 decoration: BoxDecoration(
-                    color: Colors.red,
+                  color: const Color(0xFFFE233D),
                     border: Border.all(
                         width: 2, color: Colors.red, style: BorderStyle.solid),
                     borderRadius: BorderRadius.circular(12)),
@@ -437,7 +437,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             width: 96,
             height: 36,
             decoration: BoxDecoration(
-              color: Colors.amberAccent,
+              color: const Color(0xFFE7AE41),
               borderRadius: BorderRadius.circular(8),
             ),
             child: TextButton(
@@ -456,20 +456,21 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
               width: 268,
               height: 100,
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: const Color(0xFFFE233D),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: TextButton(
                 onPressed: () {
                   showModalBottomSheet(
-                      isScrollControlled: true,
-                      shape: const RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.vertical(top: Radius.circular(30))),
-                      context: context,
-                      builder: (BuildContext context) {
-                        return const ChonSo();
-                      });
+                    isScrollControlled: true,
+                    shape: const RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.vertical(top: Radius.circular(30))),
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const ChonSoXSMB();
+                    },
+                  );
                 },
                 child: Column(
                   children: [
@@ -503,7 +504,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                    width: 2, color: Colors.black, style: BorderStyle.solid),
+                    width: 2, color: const Color(0xFFB6B6B6), style: BorderStyle.solid),
               ),
               child: Center(
                 child: TextButton(
@@ -527,7 +528,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   '?  ',
                   style: GoogleFonts.mulish(
                     textStyle: const TextStyle(fontSize: 17),
-                    color: Colors.red,
+                    color: const Color(0xFFFE233D),
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -535,7 +536,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
                   'Thể lệ',
                   style: GoogleFonts.mulish(
                       textStyle: const TextStyle(fontSize: 17),
-                      color: Colors.red,
+                      color: const Color(0xFFFE233D),
                       fontWeight: FontWeight.w700),
                 ),
               ],
@@ -549,7 +550,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             trailing:
                 Icon(_customIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
             children: const [
-             SoCuaBan(),
+             SoCuaBanXSMB(),
             ],
             onExpansionChanged: (bool expanded) {
               setState(() => _customIcon = expanded);
