@@ -24,7 +24,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
           ),
           Container(
               height: 68,
-              width: 364,
+              // width: 364,
               decoration: BoxDecoration(
                   border: Border.all(
                       width: 2, color: const Color(0xFFFE233D), style: BorderStyle.solid),
@@ -46,7 +46,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
             children: [
               Container(
                 height: 250,
-                width: 364,
+                // width: 364,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
@@ -289,7 +289,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
               ),
               Container(
                 height: 68,
-                width: 364,
+                // width: 364,
                 decoration: BoxDecoration(
                     color: const Color(0xFFFE233D),
                     border: Border.all(
@@ -572,7 +572,7 @@ class _VietLottWidgetState extends State<VietLottWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 10),
+            padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
             child: Container(
                decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),
               color: Colors.white,

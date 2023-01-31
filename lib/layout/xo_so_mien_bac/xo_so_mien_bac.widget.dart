@@ -22,7 +22,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
         ),
         Container(
             height: 68,
-            width: 364,
+            // width: 364,
             decoration: BoxDecoration(
                 border: Border.all(
                     width: 2, color: const Color(0xFFFE233D), style: BorderStyle.solid),
@@ -44,7 +44,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
           children: [
             Container(
               height: 226.81,
-              width: 364,
+              // width: 364,
               decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(
@@ -252,7 +252,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
             ),
             Container(
                 height: 80,
-                width: 364,
+                // width: 364,
                 decoration: BoxDecoration(
                   color: const Color(0xFFFE233D),
                     border: Border.all(
@@ -544,7 +544,7 @@ class _XoSoMienBacWidgetState extends State<XoSoMienBacWidget> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(13, 30, 14.32, 13),
+          padding: const EdgeInsets.fromLTRB(0, 30, 0, 13),
           // padding: const EdgeInsets.fromLTRB(0, 30, 14.32, 0),
           child: Container(
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),

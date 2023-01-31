@@ -22,7 +22,7 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
         ),
         Container(
           height: 100,
-          width: 364,
+          // width: 364,
           decoration: BoxDecoration(
               color: const Color(0xFFFE233D),
               border: Border.all(
@@ -67,8 +67,8 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
           child: Container(
-            height: 327,
-            width: 364,
+            // height: 327,
+            // width: 364,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: Colors.white,
@@ -480,7 +480,7 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(14.32, 30, 14.32, 16),
+          padding: const EdgeInsets.fromLTRB(0, 30, 0, 16),
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -517,7 +517,7 @@ class _ConSoMayManWidgetState extends State<ConSoMayManWidget> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(14.32, 0, 14.32, 10),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
